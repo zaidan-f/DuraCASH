@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
-    <link rel="stylesheet" href="css/cust.css">
+    <title>Items</title>
+    <link rel="stylesheet" href="css/store.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 
@@ -78,31 +78,33 @@
 
     <!-- Page Content -->
     <div class="container mt-5">
-        <h2>List Customer</h2>
+        <h2>List Items</h2>
 
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Nama</th>
                     <th>Alamat</th>
+                    <th>Deskripsi</th>
                     <th>Telephone</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($data as $customer)
+                @foreach($data as $store)
                 <tr>
-                    <td>{{ $customer['name'] }}</td>
-                    <td>{{ $customer['email'] }}</td>
-                    <td>{{ $customer['phone'] }}</td>
+                    <td>{{ $store['name'] }}</td>
+                    <td>{{ $store['deskripsi'] }}</td>
+                    <td>{{ $store['alamat'] }}</td>
+                    <td>{{ $store['telephone'] }}</td>
                     <td>
-                        <a href="{{ route('customer.view', ['name' => $customer['name']]) }}" class="btn-view">
+                        <a href="{{ route('items.view', ['name' => $store['name']]) }}" class="btn-view">
                             <i class="ion-eye"></i>
                         </a>
-                        <a href="{{ route('customer.edit', ['name' => $customer['name']]) }}" class="btn-edit">
+                        <a href="{{ route('items.edit', ['name' => $store['name']]) }}" class="btn-edit">
                             <i class="ion-edit"></i>
                         </a>
-                        <a href="#" class="btn-delete" onclick="deleteCustomer('{{ $customer['name'] }}')">
+                        <a href="#" class="btn-delete" onclick="deleteItems('{{ $store['name'] }}')">
                             <i class="ion-android-delete"></i>
                         </a>
                     </td>

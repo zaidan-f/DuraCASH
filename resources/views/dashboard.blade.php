@@ -37,7 +37,7 @@
     </div>
     
     <div class="sidebar-item">
-        <a href="#item">
+        <a href="/items">
             <i class="ion-bag ion-2x"></i>
             Items
         </a>
@@ -51,7 +51,7 @@
     </div>
     
     <div class="sidebar-item">
-        <a href="#store">
+        <a href="/store">
             <i class="ion-android-cart ion-2x"></i>
             Store
         </a>
