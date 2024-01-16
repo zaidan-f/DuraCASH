@@ -13,7 +13,7 @@ body {
 
 .left {
     flex: 1;
-    background-color: #F79500;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +32,7 @@ body {
     max-width: 700px;
     max-height: 100vh;
     margin-top: 0;
+    background-color: #C42E1D;
 }
 
 .headings {
@@ -44,7 +45,7 @@ body {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 5%;
-    color: #F79500;
+    color: #fff;
 }
 
 .heading2 {
@@ -57,6 +58,7 @@ body {
 .connect {
     font-size: 13px;
     margin-bottom: 1px;
+    color: white;
 }
 
 .input-group {
@@ -96,6 +98,7 @@ label {
     margin-bottom: 8px;
 	font-weight: bold;
 	font-size: 15px;
+    color: white;
 }
 
 .label-group {
@@ -136,8 +139,8 @@ label {
 }
 
 button {
-    background-color: #F79500;
-    color: white;
+    background-color: #fff;
+    color: #C42E1D;
     cursor: pointer;
     border: none;
     width: 100%;
@@ -148,7 +151,7 @@ button {
 }
 
 button:hover {
-    background-color: #d88200;
+    background-color: #d1d1d1;
 }
 
 .register {
@@ -158,23 +161,23 @@ button:hover {
 
 .register p {
     font-size: 14px;
-    color: #555;
+    color: #fff;
 }
 
 .register a {
-    color: #F79500;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
 }
 
 .register a:hover {
-    color: #F79500;
+    color: #010101;
 }
 
 /* Media query for screens smaller than 640px */
 @media (max-width: 640px) {
     .left {
-        order: 2; /* Change the order to 2, placing it after .right in the flex container */
+        display: none;
     }
 
     .right {
