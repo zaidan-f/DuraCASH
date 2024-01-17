@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Ysabeau+Infant:wght@300&display=swap');
+
+
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+html, body{
+    height: 100%;
+    font-weight: 800;
+    box-sizing: border-box;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  svg {
+    /* margin-top: 80px; */
+    margin-bottom: -100px;
+    font: 10.5em 'Monoton';
+    width: 100%;
+    height: 60vh;
+    font-family: cursive;
+  }
+  
+  .content{
+    width: 80%;
+    height: 80%;
+    background: white;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  h1{
+    text-align: center;
+    font: 1.5em ;
+    font-weight: bold;
+    color: #C42E1D;
+  }
+  
+  button {
+    top: 10%;
+    width: 220px;
+    height: 50px;
+    border: 2px solid transparent; /* Transparent border */
+    outline: none;
+    color: #ffffff;
+    background: #C42E1D;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+
+  button :hover{
+    background:white ;
+    border: 1px solid #C42E1D;
+    color: #C42E1D;
+  }
+  
+  
+  .text {
+      fill: none;
+      stroke-dasharray: 8% 29%;
+      stroke-width: 5px;
+      stroke-dashoffset: 1%;
+      animation: stroke-offset 5.5s infinite linear;
+  }
+  
+  .text:nth-child(1){
+      stroke: #ff0000;
+      animation-delay: -1;
+  }
+  
+  .text:nth-child(2){
+      stroke: #ff5100;
+      animation-delay: -2s;
+  }
+  
+  .text:nth-child(3){
+      stroke: #ffae00;
+      animation-delay: -3s;
+  }
+  
+  .text:nth-child(4){
+      stroke: #575757;
+      animation-delay: -4s;
+  }
+  
+  .text:nth-child(5){
+      stroke: #aaaaaa;
+      animation-delay: -5s;
+  }
+  
+  @keyframes stroke-offset{
+      100% {
+      stroke-dashoffset: -35%;
+    }
+  }
+
+  .pen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .panel {
+    background-color: #ff5100;
+    padding: 3rem;
+    overflow: hidden;
+    position: relative;
+    left: -200%;
+    top: -500%;
+    margin: 0 auto;
+    height: 1000%;
+    width: 400%;
+    transform: rotate(20deg);
+  }
+  
+  .scroll {
+    background: repeating-linear-gradient(45deg, #C42E1D, #C42E1D 70px, #333 70px, #333 140px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 400%;
+    width: 100%;
+    z-index: 1;
+    animation: animateBackground 5s linear infinite;
+  }
+  
+  @keyframes animateBackground {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, -396px, 0);
+    }
+  }

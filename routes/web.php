@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\StoreController;
+use App\Http\Controllers\ReportController;
 
 
 
@@ -34,3 +35,5 @@ Route::get('/store', [StoreController::class, 'index'])->name('store.index');
 Route::get('/store/{name}/view', [StoreController::class, 'view'])->name('store.view');
 Route::get('/store/{name}/edit', [StoreController::class, 'edit'])->name('store.edit');
 Route::delete('/store/{name}', [StoreController::class, 'destroy'])->name('store.destroy');  
+
+Route::get('/report', [ReportController::class, 'index']);

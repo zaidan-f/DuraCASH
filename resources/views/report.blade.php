@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Customer</title>
+    <title>Laporan</title>
     <link rel="stylesheet" href="css/styleAll.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
@@ -78,78 +78,48 @@
 
     <!-- Page Content -->
     <div class="container mt-5">
-        <h2>List Customer</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>Laporan Penjualan</h2>
+            <!-- Print Button -->
+            <button class="print-btn" onclick="printReport()"><i class="ion-android-print ion-2x"></i>Print</button>
+        </div>
 
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Nama</th>
-                    <th>Alamat</th>
-                    <th>Telephone</th>
-                    <th>Action</th>
+                    <th>Tanggal</th>
+                    <th>Produk</th>
+                    <th>Harga Jual</th>
+                    <th>Qty Terjual</th>
+                    <th>Total</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($data as $customer)
+                @foreach($data as $laporan)
                 <tr>
-                    <td>{{ $customer['name'] }}</td>
-                    <td>{{ $customer['email'] }}</td>
-                    <td>{{ $customer['phone'] }}</td>
-                    <td class="action-buttons">
-                        <a href="#" class="btn-view" onclick="openViewModal(this)">
-                            <i class="ion-eye"></i>
-                        </a>
-                        <a href="#" class="btn-edit" onclick="openEditModal(this)">
-                            <i class="ion-edit"></i>
-                        </a>
-                        <a href="#" class="btn-delete" onclick="openDeleteModal()">
-                            <i class="ion-android-delete"></i>
-                        </a>
-                    </td>
+                    <td>{{ $laporan['tanggal'] }}</td>
+                    <td>{{ $laporan['produk'] }}</td>
+                    <td>{{ $laporan['harga_jual'] }}</td>
+                    <td>{{ $laporan['qty_jual'] }}</td>
+                    <td>{{ $laporan['total'] }}</td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
-
-    </div>
-
-    <!-- Add this HTML structure inside your existing document, preferably near the end of the body -->
-    <div class="modal-container" id="viewModal">
-        <div class="modal-content">
-            <!-- Content for View Pop-up -->
-            <h3>View Customer</h3>
-            <div id="viewContent">
-                <!-- Content will be dynamically populated here -->
-            </div>
-            <button onclick="closeViewModal()">Close</button>
+        <div class="grand-total">
+            <strong>Grand Total:</strong> {{ array_sum(array_column($data, 'total')) }}
         </div>
-    </div>
+        
 
-    <div class="modal-container" id="editModal">
-        <div class="modal-content">
-            <!-- Content for Edit Pop-up -->
-            <h3>Edit Customer</h3>
-            <div id="editContent">
-                <!-- Content will be dynamically populated here -->
-            </div>
-            <button onclick="closeEditModal()">Close</button>
-        </div>
     </div>
-
-<div class="modal-container" id="deleteModal">
-    <div class="modal-content">
-        <!-- Content for Delete Confirmation Pop-up -->
-        <!-- You can customize this section based on your needs -->
-        <h3>Delete Customer</h3>
-        <p>Are you sure you want to delete this item?</p>
-        <button onclick="confirmDelete()">Confirm</button>
-        <button onclick="closeDeleteModal()">Cancel</button>
-    </div>
-</div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/cust.js"></script>
+    <script src="js/report.js"></script>
 </body>
-
+<script>
+    function printReport() {
+        window.print();
+    }
+</script>
 </html>

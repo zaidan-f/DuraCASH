@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="css\dashboard.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <body>
@@ -28,44 +28,44 @@
             Dashboard
         </a>
     </div>
-    
+
     <div class="sidebar-item">
         <a href="/customer">
             <i class="ion-android-people ion-2x"></i>
             Customer
         </a>
     </div>
-    
+
     <div class="sidebar-item">
         <a href="/items">
             <i class="ion-bag ion-2x"></i>
-            Items
+            Produk
         </a>
     </div>
-    
+
     <div class="sidebar-item">
-        <a href="#report">
+        <a href="/report">
             <i class="ion-stats-bars ion-2x"></i>
-            Report
+            Laporan
         </a>
     </div>
-    
+
     <div class="sidebar-item">
         <a href="/store">
             <i class="ion-android-cart ion-2x"></i>
-            Store
+            Toko
         </a>
     </div>
-    
+
     <div class="sidebar-item">
-        <a href="#transaction">
+        <a href="/transaction">
             <i class="ion-monitor ion-2x"></i>
-            Transaction
+            Transaksi
         </a>
     </div>
 
     <div class="logout-button">
-        <a href="#logout">
+        <a href="/logout">
             <i class="ion-log-out ion-2x"></i>
             Logout
         </a>
@@ -85,13 +85,13 @@
         <div class="card">
             <h2>Barang</h2>
             <h1>12412</h1>
-            <a href="">Lihat Detail</a>
+            <a href="items">Lihat Detail</a>
         </div>
 
         <div class="card">
             <h2>Stok Barang</h2>
             <h1>2000</h1>
-            <a href="">Lihat Detail</a>
+            <a href="/items">Lihat Detail</a>
         </div>
     </div>
 
@@ -106,7 +106,7 @@
         <div class="card">
             <h2>Toko</h2>
             <h1>50</h1>
-            <a href="">Lihat Detail</a>
+            <a href="/store">Lihat Detail</a>
         </div>
     </div>
 </div>

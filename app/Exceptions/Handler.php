@@ -27,4 +27,14 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    public function render($request, Throwable $exception)
+    {
+        if ($exception instanceof ModelNotFoundException) {
+            // Customize this line to return your custom 404 view
+            return response()->view('errors.404', [], 404);
+        }
+    
+        return parent::render($request, $exception);
+    }
 }
