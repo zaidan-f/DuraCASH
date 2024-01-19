@@ -1,3 +1,21 @@
+// Function to open the Add Customer modal
+function openAddModal() {
+    document.getElementById('addModal').style.display = 'flex';
+}
+
+// Function to close the Add Customer modal
+function closeAddModal() {
+    document.getElementById('addModal').style.display = 'none';
+}
+
+// Function to confirm the addition of a customer (you can customize this based on your needs)
+function confirmAdd() {
+    // Add your logic here to handle the form submission and add a new customer
+    // You may want to use AJAX to send the form data to the server
+    // After adding, close the modal
+    closeAddModal();
+}
+
 // Function to open the View Modal
 function openViewModal(item) {
     var itemName = item.parentNode.parentNode.cells[0].innerText;
@@ -7,10 +25,10 @@ function openViewModal(item) {
 
     var viewContent = document.getElementById("viewContent");
     viewContent.innerHTML = `
-        <p><strong>Name:</strong> ${itemName}</p>
-        <p><strong>Stock:</strong> ${itemStock}</p>
-        <p><strong>Buy Price:</strong> ${itemBuyPrice}</p>
-        <p><strong>Sell Price:</strong> ${itemSellPrice}</p>
+        <p><strong>Nama:</strong> ${itemName}</p>
+        <p><strong>Stok:</strong> ${itemStock}</p>
+        <p><strong>Harga Beli:</strong> ${itemBuyPrice}</p>
+        <p><strong>Harga Jual:</strong> ${itemSellPrice}</p>
     `;
 
     document.getElementById("viewModal").style.display = "flex";
@@ -30,19 +48,17 @@ function openEditModal(item) {
 
     var editContent = document.getElementById("editContent");
     editContent.innerHTML = `
-        <label for="editName">Name:</label>
+        <label for="editName">Nama:</label>
         <input type="text" id="editName" value="${itemName}">
 
-        <label for="editStock">Stock:</label>
+        <label for="editStock">Stok:</label>
         <input type="text" id="editStock" value="${itemStock}">
 
-        <label for="editBuyPrice">Buy Price:</label>
+        <label for="editBuyPrice">Harga Beli:</label>
         <input type="text" id="editBuyPrice" value="${itemBuyPrice}">
 
-        <label for="editSellPrice">Sell Price:</label>
+        <label for="editSellPrice">Harga Jual:</label>
         <input type="text" id="editSellPrice" value="${itemSellPrice}">
-
-        <button onclick="confirmEdit()">Save Changes</button>
     `;
 
     document.getElementById("editModal").style.display = "flex";

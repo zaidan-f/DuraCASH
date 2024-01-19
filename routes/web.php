@@ -8,7 +8,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\ReportController;
-
+use App\Http\Controllers\TransactionController;
 
 
 
@@ -37,3 +37,5 @@ Route::get('/store/{name}/edit', [StoreController::class, 'edit'])->name('store.
 Route::delete('/store/{name}', [StoreController::class, 'destroy'])->name('store.destroy');  
 
 Route::get('/report', [ReportController::class, 'index']);
+
+Route::get('/transaction', [TransactionController::class, 'index']);

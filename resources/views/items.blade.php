@@ -78,7 +78,19 @@
 
     <!-- Page Content -->
     <div class="container mt-5">
-        <h2>List Items</h2>
+        <h2>List Produk
+            <button class="add-btn" onclick="openAddModal()"><i class="ion-plus ion-2x"></i>Tambah Produk</button>
+        </h2>
+
+        <!-- Search box -->
+        <div class="search-box">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="searchCustomers()">
+                    <i class="ion-search ion-2x"></i>
+                </button>
+            </div>
+        </div>
 
         <table class="table table-bordered">
             <thead>
@@ -115,6 +127,31 @@
 
     </div>
 
+    <div class="modal-container" id="addModal">
+        <div class="modal-content">
+            <h3>Tambah Produk</h3>
+            <div id="addContent">
+                <!-- Add your form fields for adding a customer here -->
+                <!-- Example: -->
+                <label for="itemName">Nama:</label>
+                <input type="text" id="itemName" name="itemName" required>
+    
+                <label for="itemStok">Stok:</label>
+                <input type="Stok" id="itemStok" name="itemStok" required>
+    
+                <label for="itemBuy">Harga Beli:</label>
+                <input type="text" id="itemBuy" name="itemBuy" required>
+
+                <label for="itemSell">Harga Jual:</label>
+                <input type="text" id="itemSell" name="itemSell" required>
+            </div>
+            <div class="button-container">
+                <button onclick="confirmAdd()">Tambah</button>
+                <button onclick="closeAddModal()">Batal</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Add this HTML structure inside your existing document, preferably near the end of the body -->
     <div class="modal-container" id="viewModal">
         <div class="modal-content">
@@ -123,7 +160,7 @@
             <div id="viewContent">
                 <!-- Content will be dynamically populated here -->
             </div>
-            <button onclick="closeViewModal()">Close</button>
+            <button class="close-btn" onclick="closeViewModal()">Close</button>
         </div>
     </div>
 
@@ -134,7 +171,8 @@
             <div id="editContent">
                 <!-- Content will be dynamically populated here -->
             </div>
-            <button onclick="closeEditModal()">Close</button>
+            <button onclick="confirmEdit()">Ubah</button>
+            <button onclick="closeEditModal()">Batal</button>
         </div>
     </div>
 
@@ -142,10 +180,10 @@
     <div class="modal-content">
         <!-- Content for Delete Confirmation Pop-up -->
         <!-- You can customize this section based on your needs -->
-        <h3>Delete Items</h3>
-        <p>Are you sure you want to delete this item?</p>
-        <button onclick="confirmDelete()">Confirm</button>
-        <button onclick="closeDeleteModal()">Cancel</button>
+        <h3>Hapus Produk</h3>
+        <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
+        <button onclick="confirmDelete()">Ya</button>
+        <button onclick="closeDeleteModal()">Tidak</button>
     </div>
 </div>
 

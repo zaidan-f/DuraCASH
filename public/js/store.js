@@ -1,4 +1,20 @@
-// Add these JavaScript functions to your existing script.js file or create a new one
+// Function to open the Add Customer modal
+function openAddModal() {
+    document.getElementById('addModal').style.display = 'flex';
+}
+
+// Function to close the Add Customer modal
+function closeAddModal() {
+    document.getElementById('addModal').style.display = 'none';
+}
+
+// Function to confirm the addition of a customer (you can customize this based on your needs)
+function confirmAdd() {
+    // Add your logic here to handle the form submission and add a new customer
+    // You may want to use AJAX to send the form data to the server
+    // After adding, close the modal
+    closeAddModal();
+}
 
 // Function to open the view pop-up
 function openViewModal(item) {
@@ -11,9 +27,9 @@ function openViewModal(item) {
     // Populate the content in the View Pop-up
     var viewContent = document.getElementById("viewContent");
     viewContent.innerHTML = `
-        <p><strong>Name:</strong> ${itemName}</p>
-        <p><strong>Description:</strong> ${itemDescription}</p>
-        <p><strong>Address:</strong> ${itemAddress}</p>
+        <p><strong>Nama:</strong> ${itemName}</p>
+        <p><strong>Deskripsi:</strong> ${itemDescription}</p>
+        <p><strong>Alamat:</strong> ${itemAddress}</p>
         <p><strong>Telephone:</strong> ${itemTelephone}</p>
         <!-- Add more details as needed -->
     `;
@@ -39,13 +55,13 @@ function openEditModal(item) {
     var editContent = document.getElementById("editContent");
     editContent.innerHTML = `
         <!-- You can use input fields or other form elements here -->
-        <label for="editName">Name:</label>
+        <label for="editName">Nama:</label>
         <input type="text" id="editName" value="${itemName}">
 
-        <label for="editDescription">Description:</label>
+        <label for="editDescription">Deskripsi:</label>
         <input type="text" id="editDescription" value="${itemDescription}">
 
-        <label for="editAddress">Address:</label>
+        <label for="editAddress">Alamat:</label>
         <input type="text" id="editAddress" value="${itemAddress}">
 
         <label for="editTelephone">Telephone:</label>
@@ -53,7 +69,6 @@ function openEditModal(item) {
 
         <!-- Add more input fields as needed -->
         
-        <button onclick="confirmEdit()">Save Changes</button>
     `;
 
     // Display the Edit Pop-up
