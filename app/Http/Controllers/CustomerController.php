@@ -29,6 +29,11 @@ class CustomerController extends Controller
             ['name' => 'Bob Johnson', 'email' => 'bob@example.com', 'phone' => '555-123-4567'],
         ];
 
+
+        if (request()->ajax()) {
+            return response()->json(['data' => $data]);
+        }
+        
         return view('Customer', compact('data'));
     }
 }

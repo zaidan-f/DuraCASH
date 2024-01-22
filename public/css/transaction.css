@@ -134,6 +134,19 @@ h2 {
     margin: 0; /* Remove default margin */
     align-self: stretch; /* Make h2 span the entire width */
     border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.refresh-btn {
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: x-large;
 }
 
 .row {
@@ -159,7 +172,7 @@ h2 {
 label {
     display: block;
     font-weight: bold;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }
 
 input {
@@ -169,8 +182,57 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
+.add-customer-input {
+    display: flex;
+    align-items: center;
+}
+
+.add-customer-input input {
+    width: 42%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0px 0px 5px;
+    margin-right: -1px;
+}
+
+.add-customer-input button {
+    padding: 8px 12px;
+    border: 1px solid #C42E1D;
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    background-color: #C42E1D;
+    color: #fff;
+}
+
+.add-customer-input button i {
+    margin-right: 5px;
+}
+
+.add-btn {
+    background-color: #fff;
+    border: 2px solid #C42E1D;
+    padding: 8px 12px;
+    color: #C42E1D;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 15px 15px 15px auto;
+}
+
+.add-btn i {
+    margin-right: 5px;
+}
+
+.add-btn:hover {
+    background-color: #C42E1D;
+    color: #fff;
+}
 
 .table {
     width: 98%;
@@ -226,4 +288,35 @@ input {
     font-weight: bold;
     background-color: #dc3545;
     color: #000;
+}
+
+.grand-total {
+    font-size: 24px;
+    text-align: right;
+    margin:10px 40% 10px 0px;
+}
+
+.pay-btn {
+    width: 10%;
+    text-align: center;
+    background-color: #C42E1D;
+    border: 2px solid #C42E1D;
+    padding: 10px 12px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin: 15px 20px 15px auto;
+}
+
+.pay-btn i {
+    margin-right: 5px;
+}
+
+.pay-btn:hover {
+    background-color: #fff;
+    color: #C42E1D;
 }
