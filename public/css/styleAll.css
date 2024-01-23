@@ -159,6 +159,10 @@
     border-radius: 5px 5px 0 0;
 }
 
+.modal-content p {
+    margin-left: 10px;
+}
+
 .button-container {
     text-align: center;
     margin-top: 20px;

@@ -108,8 +108,10 @@
             <div id="editContent">
                 <!-- Content will be dynamically populated here -->
             </div>
-            <button onclick="confirmEdit()">Ubah</button>
-            <button onclick="closeEditModal()">Batal</button>
+            <div class="button-container">
+                <button onclick="confirmEdit()">Ubah</button>
+                <button onclick="closeEditModal()">Batal</button>
+            </div>
         </div>
     </div>
 
@@ -119,8 +121,10 @@
         <!-- You can customize this section based on your needs -->
         <h3>Hapus Produk</h3>
         <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
-        <button onclick="confirmDelete()">Ya</button>
-        <button onclick="closeDeleteModal()">Tidak</button>
+        <div class="button-container">
+            <button onclick="confirmDelete()">Ya</button>
+            <button onclick="closeDeleteModal()">Tidak</button>
+        </div>
     </div>
 </div>
 

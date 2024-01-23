@@ -101,9 +101,9 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Name</th>
+                            <th>Nama</th>
                             <th>Email</th>
-                            <th>Phone</th>
+                            <th>Telephone</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -135,7 +135,7 @@
                     <thead>
                         <tr>
                             <th>Nama</th>
-                            <th>Qty</th>
+                            <th>Stok</th>
                             <th>Harga</th>
                             <th>Action</th>
                         </tr>
@@ -159,25 +159,42 @@
         </div>
     </div>
 
+    <!-- Edit Modal -->
     <div id="editModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeEditModal()">&times;</span>
-            <h3>Edit Item</h3>
+        <div class="modal-content1">
+            <h3>Edit Barang</h3>
             <!-- Replace with your actual form fields -->
-            <input type="text" id="editName" placeholder="Item Name" readonly>
-            <input type="text" id="editQty" placeholder="Quantity" readonly>
-            <input type="text" id="editSell" placeholder="Sell Price">
-            <input type="text" id="editTotal" placeholder="Total" readonly>
-            <button onclick="saveChanges()">Save Changes</button>
+            <div class="inputModal">
+                <label for="editName">Nama:</label>
+                <input type="text" id="editName" readonly>
+
+                <label for="editQty">Qty:</label>
+                <input type="text" id="editQty" readonly>
+
+                <label for="editSell">Harga Jual:</label>
+                <input type="text" id="editSell" required>
+
+                <label for="editTotal">Total:</label>
+                <input type="text" id="editTotal"  readonly>
+            </div>
+            <div class="button-container">
+                <button onclick="saveChanges()">Ubah</button>
+                <button onclick="closeEditModal()">Close</button>
+            </div>
         </div>
     </div>
-    
+
+
+
+    <!-- Delete Confirmation Modal -->
     <div id="deleteConfirmModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeDeleteModal()">&times;</span>
-            <h3>Delete Item</h3>
-            <p>Are you sure you want to delete this item?</p>
-            <button onclick="deleteItem()">Delete</button>
+        <div class="modal-content1">
+            <h3>Hapus Barang</h3>
+            <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
+            <div class="button-container">
+                <button onclick="deleteItem()">Ya</button>
+                <button onclick="closeDeleteModal()">Tidak</button>
+            </div>
         </div>
     </div>
    

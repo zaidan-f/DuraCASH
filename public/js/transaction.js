@@ -103,62 +103,21 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('transactionNumber').value = generatedNumber;
 });
 
-// Function to open the edit pop-up
-function openEditModal(item) {
-    // Get the data from the table row (you may need to customize this based on your table structure)
-    var itemName = item.parentNode.parentNode.cells[0].innerText; // Change the index based on the column position
-    var itemDescription = item.parentNode.parentNode.cells[1].innerText; // Change the index based on the column position
-    var itemAddress = item.parentNode.parentNode.cells[2].innerText; // Change the index based on the column position
-    var itemTelephone = item.parentNode.parentNode.cells[3].innerText; // Change the index based on the column position
-
-    // Populate the content in the Edit Pop-up
-    var editContent = document.getElementById("editContent");
-    editContent.innerHTML = `
-        <!-- You can use input fields or other form elements here -->
-        <label for="editName">Nama:</label>
-        <input type="text" id="editName" value="${itemName}">
-
-        <label for="editDescription">Deskripsi:</label>
-        <input type="text" id="editDescription" value="${itemDescription}">
-
-        <label for="editAddress">Alamat:</label>
-        <input type="text" id="editAddress" value="${itemAddress}">
-
-        <label for="editTelephone">Telephone:</label>
-        <input type="text" id="editTelephone" value="${itemTelephone}">
-
-        <!-- Add more input fields as needed -->
-        
-    `;
-
-    // Display the Edit Pop-up
-    document.getElementById("editModal").style.display = "flex";
-}
-
-// Function to confirm the edit action
-function confirmEdit() {
-    // Get the updated values from the input fields
-    var updatedName = document.getElementById("editName").value;
-    var updatedQty = document.getElementById("editQty").value;
-    var updatedSell = document.getElementById("editSell").value;
-    var updatedTotal = document.getElementById("editTotal").value;
-
-    // Add your logic here to handle the edit action
-    // You can send the updated values to your server, update the table, etc.
-
-    // For now, let's just close the pop-up
-    closeEditModal();
-}
 
 // Function to open the edit pop-up and populate the fields
 function openEditModal(element) {
     var row = element.closest("tr"); // Get the closest row
     var name = row.cells[0].innerText; // Assuming the name is in the first column
     var qty = row.cells[1].innerText; // Assuming quantity is in the second column
+    var sell = row.cells[2].innerText;
+    var total = row.cells[3].innerText;
+
 
     // Populate the edit modal fields with the values from the selected row
     document.getElementById("editName").value = name;
     document.getElementById("editQty").value = qty;
+    document.getElementById("editSell").value = sell;
+    document.getElementById("editTotal").value = total;
 
     // You can add similar lines for other fields (sell, total) if needed
 
