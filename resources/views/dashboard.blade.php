@@ -49,6 +49,8 @@
     </div>
 
 
+    @include('layout.footer')
+    
 </body>
 <script>
 

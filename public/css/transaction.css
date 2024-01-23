@@ -1,122 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Mono&family=Ysabeau+Infant:wght@300&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-}
-
-.navbar {
-    background-color: #fff;
-    display: flex;
-    overflow: hidden;
-    border-bottom: solid 2px #C42E1D;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    max-height: 50px;
-}
-
-.navbar a {
-    flex-grow: 1;
-    text-align: center;
-    padding: 8px 6px;
-    text-decoration: none;
-    color: #C42E1D;
-    font-weight: 1000;
-    font-size: larger;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    max-width: 50px;
-    height: auto;
-    margin-left: 6px;
-    margin-right: 6px;
-}
-
-.logo a {
-    margin: 0;
-}
-
-.account-section {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    padding-right: 16px;
-}
-
-.account-section img {
-    width: 30px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.logout-button {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    background-color: #C42E1D;
-    text-align: center;
-    padding: 0px 0;
-    border-top: solid 2px #fff;
-}
-
-.logout-button a {
-    color: #fff;
-    text-decoration: none;
-    font-size: small;
-    font-weight: 700;
-}
-
-.sidenav {
-    height: 100%;
-    width: 80px;
-    position: fixed;
-    z-index: 1;
-    top: 50px;
-    left: 0;
-    border-right: solid 2px #C42E1D;
-}
-
-.sidenav a:focus {
-    color: #fff;
-    background-color: #C42E1D;
-    outline: none; 
-}
-
-.sidenav a {
-    padding: 5px 0;
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 700;
-    font-size: small;
-}
-
-.sidenav a i {
-    margin-bottom: 5px;
-    font-size: 24px;
-    font-weight: 1000;
-}
-
-.sidenav a:hover {
-    color: #C42E1D;
-    background-color: #f1f1f1;
-}
-
-
 /* Container Styles */
 .container {
     margin: 10px 10px 10px 90px;
@@ -212,7 +93,7 @@ input {
     margin-right: 5px;
 }
 
-.add-btn {
+.add-btnItem {
     background-color: #fff;
     border: 2px solid #C42E1D;
     padding: 8px 12px;
@@ -225,11 +106,11 @@ input {
     margin: 15px 15px 15px auto;
 }
 
-.add-btn i {
+.add-btnItem i {
     margin-right: 5px;
 }
 
-.add-btn:hover {
+.add-btnItem:hover {
     background-color: #C42E1D;
     color: #fff;
 }
@@ -275,8 +156,10 @@ input {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    background-color: #fbff00;
+    background-color: transparent;
     color: #000;
+    border: 1px solid #fbff00;
+    text-decoration: none;
 }
 
 .btn-delete {
@@ -286,8 +169,9 @@ input {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    background-color: #dc3545;
+    background-color: transparent;
     color: #000;
+    border: 1px solid #dc3545;
 }
 
 .grand-total {
@@ -297,7 +181,6 @@ input {
 }
 
 .pay-btn {
-    width: 10%;
     text-align: center;
     background-color: #C42E1D;
     border: 2px solid #C42E1D;
@@ -319,4 +202,54 @@ input {
 .pay-btn:hover {
     background-color: #fff;
     color: #C42E1D;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.add-btnCust {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #dc3545;
+}
+
+/* Style for the close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

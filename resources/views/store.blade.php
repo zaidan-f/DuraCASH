@@ -16,17 +16,18 @@
     <!-- Page Content -->
     <div class="container mt-5">
         <h2>List Toko
-            <button class="add-btn" onclick="openAddModal()"><i class="ion-plus ion-2x"></i>Tambah Toko</button>
+            <div class="search-box">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button onclick="searchStore()">
+                        <i class="ion-search ion-2x"></i>
+                    </button>
+                </div>
+            </div>
         </h2>
 
-        <!-- Search box -->
-        <div class="search-box">
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search...">
-                <button onclick="searchCustomers()">
-                    <i class="ion-search ion-2x"></i>
-                </button>
-            </div>
+        <div>
+            <button class="add-btn" onclick="openAddModal()"><i class="ion-plus ion-2x"></i>Tambah Toko</button>
         </div>
 
         <table class="table table-bordered">
@@ -124,6 +125,7 @@
     </div>
 </div>
 
+@include('layout.footer')
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/store.js"></script>

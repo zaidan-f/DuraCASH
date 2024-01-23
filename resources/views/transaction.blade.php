@@ -45,15 +45,15 @@
             <div class="col-2">
                 <div class="add-customer-input">
                     <input type="text" id="customer" name="customer" required>
-                    <button class="add-btnCust" onclick="openAddModal()"><i class="ion-plus ion-2x"></i></button>
+                    <button class="add-btnCust" onclick="openCustModal()"><i class="ion-plus ion-2x"></i></button>
                 </div>
             </div>
         </div>
         
         <div>
-            <button class="add-btn" onclick="openAddModal()"><i class="ion-plus ion-2x"></i>Tambah Produk</button>
+            <button class="add-btnItem" onclick="openAddModal()"><i class="ion-plus ion-2x"></i>Tambah Produk</button>
         </div>
-        
+
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -65,34 +65,124 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($data as $item)
-                <tr>
-                    <td>{{ $item['name'] }}</td>
-                    <td>{{ $item['qty'] }}</td>
-                    <td>{{ $item['sell'] }}</td>
-                    <td>{{ $item['total'] }}</td>
-                    <td class="action-buttons">
-                        <a href="#" class="btn-edit" onclick="openEditModal(this)">
-                            <i class="ion-edit"></i>
-                        </a>
-                        <a href="#" class="btn-delete" onclick="openDeleteModal()">
-                            <i class="ion-android-delete"></i>
-                        </a>
-                    </td>
-                </tr>
+                @foreach($itemData as $item)
+                    <tr>
+                        <td>{{ $item['name'] }}</td>
+                        <td>{{ $item['qty'] }}</td>
+                        <td>{{ $item['sell'] }}</td>
+                        <td>{{ $item['total'] }}</td>
+                        <td class="action-buttons">
+                            <a href="#" class="btn-edit" onclick="openEditModal(this)">
+                                <i class="ion-edit"></i>
+                            </a>
+                            <a href="#" class="btn-delete" onclick="openDeleteModal()">
+                                <i class="ion-android-delete"></i>
+                            </a>
+                        </td>
+                    </tr>
                 @endforeach
             </tbody>
+
         </table>
         <div class="grand-total">
-            <strong>Grand Total:</strong> {{ array_sum(array_column($data, 'total')) }}
+            <strong>Grand Total:</strong> {{ array_sum(array_column($itemData, 'total')) }}
         </div>
 
         <div>
             <button class="pay-btn" onclick="openPayModal()"><i class="ion-android-checkmark-circle ion-2x"></i>Bayar</button>
         </div>
     </div>
-   
 
+    <div id="customerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCustModal()">&times;</span>
+            <div id="modalContent">
+                <h3>Customer Information</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($customerData  as $customer)
+                            <tr>
+                                <td>{{ $customer['namecust'] }}</td>
+                                <td>{{ $customer['email'] }}</td>
+                                <td>{{ $customer['phone'] }}</td>
+                                <td class="action-buttons">
+                                    <button class="add-btnCust" onclick="yourActionFunction('{{ $customer['namecust'] }}')">
+                                        <i class="ion-plus ion-2x"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="addItems" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddModal()">&times;</span>
+            <div id="modalContent">
+                <h3>Tambah Barang</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Qty</th>
+                            <th>Harga</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($addItems  as $addItems)
+                            <tr>
+                                <td>{{ $addItems['nameitem'] }}</td>
+                                <td>{{ $addItems['stok'] }}</td>
+                                <td>{{ $addItems['buy'] }}</td>
+                                <td class="action-buttons">
+                                    <button class="add-btnCust" onclick="AddItemsAct('{{ $addItems['nameitem'] }}', '{{ $addItems['stok'] }}', '{{ $addItems['buy'] }}')">
+                                        <i class="ion-plus ion-2x"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <h3>Edit Item</h3>
+            <!-- Replace with your actual form fields -->
+            <input type="text" id="editName" placeholder="Item Name" readonly>
+            <input type="text" id="editQty" placeholder="Quantity" readonly>
+            <input type="text" id="editSell" placeholder="Sell Price">
+            <input type="text" id="editTotal" placeholder="Total" readonly>
+            <button onclick="saveChanges()">Save Changes</button>
+        </div>
+    </div>
+    
+    <div id="deleteConfirmModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDeleteModal()">&times;</span>
+            <h3>Delete Item</h3>
+            <p>Are you sure you want to delete this item?</p>
+            <button onclick="deleteItem()">Delete</button>
+        </div>
+    </div>
+   
+    @include('layout.footer')
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/transaction.js"></script>
 </body>
