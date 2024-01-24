@@ -20,6 +20,13 @@ class ReportController extends Controller
             ['tanggal' => '1 Jan 2024', 'produk' => 'Sabun', 'harga_jual' => '5.000', 'qty_jual' => '100',  'total' => '500.000'],
         ];
 
-        return view('report', compact('data'));
+
+
+        $chartData = [
+            'labels' => [' Minyak', 'Sabun', 'Air Mineral', 'Tissue', 'Beras'],
+            'data' => [],
+        ];
+
+    return view('report', compact('data', 'chartData'));
     }
 }

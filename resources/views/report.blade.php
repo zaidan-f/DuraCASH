@@ -8,6 +8,8 @@
     <title>Laporan</title>
     <link rel="stylesheet" href="css/styleAll.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -46,6 +48,13 @@
             <strong>Grand Total:</strong> {{ array_sum(array_column($data, 'total')) }}
         </div>
         
+        <div class="chart">
+            <h2>Laporan Perbandingan</h2>
+            <canvas id="salesChart" width="80%" height="20%" 
+            data-labels="{{ json_encode($chartData['labels']) }}"
+            data-data="{{ json_encode($chartData['data']) }}"></canvas>
+    
+        </div>
 
     </div>
 
@@ -55,8 +64,6 @@
     <script src="js/report.js"></script>
 </body>
 <script>
-    function printReport() {
-        window.print();
-    }
+
 </script>
 </html>

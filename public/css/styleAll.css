@@ -240,6 +240,7 @@
 
     .sidenav,
     .navbar,
+    .chart,
     .print-btn {
         display: none !important;
     }
