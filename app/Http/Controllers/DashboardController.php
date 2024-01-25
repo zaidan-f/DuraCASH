@@ -8,6 +8,11 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard');
+        $chartData = [
+            'labels' => [' Minyak', 'Sabun', 'Air Mineral', 'Tissue', 'Beras'],
+            'data' => [],
+        ];
+
+        return view('dashboard', compact('chartData'));
     }
 }

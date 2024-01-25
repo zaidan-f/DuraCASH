@@ -1,9 +1,3 @@
-// chartScript.js
-
-function printReport() {
-    window.print();
-}
-
 var chartCanvas = document.getElementById('salesChart');
 var chartData = {
     labels: JSON.parse(chartCanvas.getAttribute('data-labels')),
