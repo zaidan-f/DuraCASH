@@ -68,11 +68,21 @@ function AddItemsAct(nameitem, stok, buy) {
     selectedItems.push(newItem);
 
     // Update the HTML to display the added items
-    updateAddedItemsList();
+    // updateAddedItemsList();
 
     // Close the "Tambah Barang" modal
     closeAddModal();
+
+    // Find the last added item's edit button and trigger the click event
+    var editButtons = document.querySelectorAll('.btn-edit');
+    var lastEditButton = editButtons[editButtons.length - 1];
+    
+    if (lastEditButton) {
+        lastEditButton.click();
+    }
 }
+
+
 
 function updateAddedItemsList() {
     var container = document.getElementById('addedItemsList');

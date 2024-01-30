@@ -21,6 +21,12 @@
             <!-- Print Button -->
             <button class="print-btn" onclick="printReport()"><i class="ion-android-print ion-2x"></i>Print</button>
         </div>
+        <div class="datePeriod">
+            <label for="dateRange">Periode:</label>
+            <input type="date" id="startDate">
+            <span>-</span>
+            <input type="date" id="endDate" value="<?php echo date('Y-m-d'); ?>">
+        </div>
 
         <table class="table table-bordered">
             <thead>

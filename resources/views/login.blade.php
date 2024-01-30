@@ -15,7 +15,7 @@
   <form action="#" id="login-form">
         <div class="left">
             <div class="container">
-                <img src="https://i.postimg.cc/tTYs3TPG/image-2.png" alt="">
+                <img src="img\logo.png" alt="">
             </div>
         </div>
         <div class="right">

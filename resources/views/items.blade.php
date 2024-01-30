@@ -25,15 +25,24 @@
             </div>
         </h2>
 
-        <div>
+        <div class="btn2">
+            <label for="itemKategori">Kategori:</label>
+            <select id="itemKategori" name="itemKategori" required>
+                <option value="option1">ATK</option>
+                <option value="option2">Dapur</option>
+                <option value="option3">Toilet</option>
+                <option value="option4">Lainnya</option>
+            </select>
             <button class="add-btn" onclick="openAddModal()"><i class="ion-plus ion-2x"></i>Tambah Produk</button>
         </div>
+        
 
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Nama</th>
                     <th>Stok</th>
+                    <th>Kategori</th>
                     <th>Harga Beli</th>
                     <th>Harga Jual</th>
                     <th>Action</th>
@@ -44,6 +53,7 @@
                 <tr>
                     <td>{{ $item['name'] }}</td>
                     <td>{{ $item['stok'] }}</td>
+                    <td>{{ $item['kategori'] }}</td>
                     <td>{{ $item['buy'] }}</td>
                     <td>{{ $item['sell'] }}</td>
                     <td class="action-buttons">
@@ -75,6 +85,14 @@
     
                 <label for="itemStok">Stok:</label>
                 <input type="Stok" id="itemStok" name="itemStok" required>
+
+                <label for="itemKategori">Kategori:</label>
+                <select id="itemKategori" name="itemKategori" required>
+                    <option value="option1">ATK</option>
+                    <option value="option2">Dapur</option>
+                    <option value="option3">Toilet</option>
+                    <option value="option4">Lainnya</option>
+                </select>
     
                 <label for="itemBuy">Harga Beli:</label>
                 <input type="text" id="itemBuy" name="itemBuy" required>

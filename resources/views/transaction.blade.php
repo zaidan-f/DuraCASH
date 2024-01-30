@@ -25,7 +25,7 @@
                 <label for="transactionNumber">Transaction Number :</label>
             </div>
             <div class="col-2">
-                <input type="text" id="transactionNumber" name="transactionNumber" readonly>
+                <input type="text" id="transactionNumber" name="transactionNumber" readonly required>
             </div>
         </div>
 
@@ -44,7 +44,7 @@
             </div>
             <div class="col-2">
                 <div class="add-customer-input">
-                    <input type="text" id="customer" name="customer" required>
+                    <input type="text" id="customer" name="customer" required readonly>
                     <button class="add-btnCust" onclick="openCustModal()"><i class="ion-plus ion-2x"></i></button>
                 </div>
             </div>
@@ -97,7 +97,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeCustModal()">&times;</span>
             <div id="modalContent">
-                <h3>Customer Information</h3>
+                <h3>Tambah Customer</h3>
                 <table class="table">
                     <thead>
                         <tr>
@@ -130,7 +130,16 @@
         <div class="modal-content">
             <span class="close" onclick="closeAddModal()">&times;</span>
             <div id="modalContent">
-                <h3>Tambah Barang</h3>
+                <h3>Tambah Barang
+                    <div class="search-box">
+                        <div class="search-container">
+                            <input type="text" id="searchInput" placeholder="Search...">
+                            <button onclick="searchItem()">
+                                <i class="ion-search ion-2x"></i>
+                            </button>
+                        </div>
+                    </div>
+                </h3>
                 <table class="table">
                     <thead>
                         <tr>
@@ -169,7 +178,7 @@
                 <input type="text" id="editName" readonly>
 
                 <label for="editQty">Qty:</label>
-                <input type="text" id="editQty" readonly>
+                <input type="text" id="editQty" required>
 
                 <label for="editSell">Harga Jual:</label>
                 <input type="text" id="editSell" required>

@@ -20,13 +20,15 @@ function confirmAdd() {
 function openViewModal(item) {
     var itemName = item.parentNode.parentNode.cells[0].innerText;
     var itemStock = item.parentNode.parentNode.cells[1].innerText;
-    var itemBuyPrice = item.parentNode.parentNode.cells[2].innerText;
-    var itemSellPrice = item.parentNode.parentNode.cells[3].innerText;
+    var itemCat = item.parentNode.parentNode.cells[2].innerText;
+    var itemBuyPrice = item.parentNode.parentNode.cells[3].innerText;
+    var itemSellPrice = item.parentNode.parentNode.cells[4].innerText;
 
     var viewContent = document.getElementById("viewContent");
     viewContent.innerHTML = `
         <p><strong>Nama:</strong> ${itemName}</p>
         <p><strong>Stok:</strong> ${itemStock}</p>
+        <p><strong>Kategori:</strong> ${itemCat}</p>
         <p><strong>Harga Beli:</strong> ${itemBuyPrice}</p>
         <p><strong>Harga Jual:</strong> ${itemSellPrice}</p>
     `;
@@ -43,16 +45,28 @@ function closeViewModal() {
 function openEditModal(item) {
     var itemName = item.parentNode.parentNode.cells[0].innerText;
     var itemStock = item.parentNode.parentNode.cells[1].innerText;
-    var itemBuyPrice = item.parentNode.parentNode.cells[2].innerText;
-    var itemSellPrice = item.parentNode.parentNode.cells[3].innerText;
+    var itemCat = item.parentNode.parentNode.cells[2].innerText;
+    var itemBuyPrice = item.parentNode.parentNode.cells[3].innerText;
+    var itemSellPrice = item.parentNode.parentNode.cells[4].innerText;
 
     var editContent = document.getElementById("editContent");
     editContent.innerHTML = `
         <label for="editName">Nama:</label>
         <input type="text" id="editName" value="${itemName}">
 
-        <label for="editStock">Stok:</label>
-        <input type="text" id="editStock" value="${itemStock}">
+        <label for="editStock">Stok Awal:</label>
+        <input type="number" id="editStock" value="${itemStock}">
+
+        <label for="addStock">Tambah Stok:</label>
+        <input type="number" id="addStock" required>
+
+        <label for="editKategori">Kategori:</label>
+        <select id="editKategori" name="editKategori" value="${itemCat}">
+            <option value="option1">ATK</option>
+            <option value="option2">Dapur</option>
+            <option value="option3">Toilet</option>
+            <option value="option4">Lainnya</option>
+        </select>
 
         <label for="editBuyPrice">Harga Beli:</label>
         <input type="text" id="editBuyPrice" value="${itemBuyPrice}">

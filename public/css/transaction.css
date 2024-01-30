@@ -66,6 +66,10 @@ input {
     margin-bottom: 5px;
 }
 
+input:read-only{
+    background-color: #e0e0e0;
+}
+
 .add-customer-input {
     display: flex;
     align-items: center;
@@ -268,6 +272,41 @@ input {
     justify-content: center;
 }
 
+
+.search-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 8px;
+    min-width: 70px;
+    border: 1px solid #C42E1D;
+    border-radius: 5px 0px 0px 5px;
+    margin-right: -8px;
+}
+
+.search-container button {
+    padding: 8px 12px;
+    border: 1px solid #C42E1D;
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    background-color: #C42E1D;
+    color: #fff;
+}
+
+.search-container button i {
+    margin-right: 1px;
+}
+
+ 
 .modal button {
     background-color: #C42E1D;
     color: #fff;
@@ -288,6 +327,10 @@ input {
 
 .inputModal input{
     width: 100%;
+}
+
+.inputModal input:read-only{
+    background-color: #e0e0e0;
 }
 
 .close {

@@ -43,7 +43,7 @@
                 @foreach($data as $customer)
                 <tr>
                     <td>{{ $customer['name'] }}</td>
-                    <td>{{ $customer['email'] }}</td>
+                    <td>{{ $customer['alamat'] }}</td>
                     <td>{{ $customer['phone'] }}</td>
                     <td class="action-buttons">
                         <a href="#" class="btn-view" onclick="openViewModal(this)">
@@ -72,8 +72,8 @@
                 <label for="customerName">Name:</label>
                 <input type="text" id="customerName" name="customerName" required>
     
-                <label for="customerEmail">Email:</label>
-                <input type="email" id="customerEmail" name="customerEmail" required>
+                <label for="customerAddress">Alamat:</label>
+                <input type="text" id="customerAddress" name="customerAddress" required>
     
                 <label for="customerPhone">Phone:</label>
                 <input type="text" id="customerPhone" name="customerPhone" required>

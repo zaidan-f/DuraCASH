@@ -34,8 +34,8 @@
             <thead>
                 <tr>
                     <th>Nama</th>
-                    <th>Alamat</th>
                     <th>Deskripsi</th>
+                    <th>Alamat</th>
                     <th>Telephone</th>
                     <th>Action</th>
                 </tr>

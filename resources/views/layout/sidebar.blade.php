@@ -133,7 +133,7 @@
     <!-- Navbar -->
     <div class="navbar">
         <div class="logo">
-            <img src="https://i.postimg.cc/tTYs3TPG/image-2.png" alt="">
+            <img src="img\logo.png" alt="">
             <a href="/dashboard">DuraPOS</a>
         </div>
 
