@@ -8,6 +8,8 @@
                 color: #363636;
                 padding: 10px;
                 text-align: center;
+                bottom: 0;
+                position: relative;
             }
             
             footer p {

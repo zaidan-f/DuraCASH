@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
 }
 
 #login-form {
@@ -20,8 +21,10 @@ body {
 }
 
 .left img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
+    display: block;
+    margin: auto;
 }
 
 .right {
@@ -30,7 +33,7 @@ body {
     box-sizing: border-box;
     margin: auto;
     max-width: 700px;
-    max-height: 100vh;
+    min-height: 100vh;
     margin-top: 0;
     background-color: #C42E1D;
 }
@@ -44,15 +47,8 @@ body {
 .heading {
     font-size: 22px;
     font-weight: bold;
-    margin-bottom: 5%;
+    margin-bottom: 10px;
     color: #fff;
-}
-
-.heading2 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 5%;
-    margin-left: 10px;
 }
 
 .connect {
@@ -88,7 +84,7 @@ input[type="password"] {
     width: calc(100% - 4px);
     padding: 19px;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border: 2px solid black;
     border-radius: 10px;
 }

@@ -21,8 +21,7 @@
         <div class="right">
             <div class="connect">Selamat Datang Kembali</div>
             <div class="headings">
-              <div class="heading">Log In</div>
-              <div class="heading2"> ke Akun Anda</div>
+              <div class="heading">Log In ke Akun Anda</div>
             </div>
 
                 <div>

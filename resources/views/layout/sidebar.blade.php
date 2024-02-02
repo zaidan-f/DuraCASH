@@ -10,7 +10,7 @@
                 font-family: 'Poppins', sans-serif;
                 display: flex;
                 flex-direction: column;
-                /* align-items: center; */
+                min-height: 100vh;
             }
 
             /* Navbar */
@@ -61,9 +61,10 @@
             }
 
             .account-section img {
-                width: 30px;
+                width: 40px;
                 height: auto;
                 border-radius: 50%;
+                margin: 10px 0px 0px 0px;
             }
 
             .logout-button {
@@ -138,7 +139,7 @@
         </div>
 
         <div class="account-section">
-            <img src="img\account.png" alt="Account Image">
+            <a href="/account"><img src="img\account.png" alt="Account Image"></a>
         </div>
     </div>
 

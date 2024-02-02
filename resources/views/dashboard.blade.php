@@ -50,7 +50,7 @@
 
             <!-- Chart Container -->
             <div class="chart">
-                <h2>Laporan Perbandingan</h2>
+                <h2>Laporan Penjualan</h2>
                 <canvas id="salesChart" width="80%" height="20%" 
                 data-labels="{{ json_encode($chartData['labels']) }}"
                 data-data="{{ json_encode($chartData['data']) }}"></canvas>

@@ -9,6 +9,7 @@ use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\AccountController;
 
 
 
@@ -39,3 +40,5 @@ Route::delete('/store/{name}', [StoreController::class, 'destroy'])->name('store
 Route::get('/report', [ReportController::class, 'index']);
 
 Route::get('/transaction', [TransactionController::class, 'index']);
+
+Route::get('/account', [AccountController::class, 'index']);
