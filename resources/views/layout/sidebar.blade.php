@@ -106,7 +106,7 @@
             }
 
             .sidenav a {
-                padding: 5px 0;
+                padding: 4px 0;
                 text-decoration: none;
                 text-align: center;
                 color: black;
@@ -119,7 +119,7 @@
 
             .sidenav a i {
                 margin-bottom: 5px;
-                font-size: 24px;
+                font-size: 22px;
                 font-weight: 1000;
             }
 
@@ -147,14 +147,14 @@
     <div id="sidebar" class="sidenav">
         <div class="sidebar-item" tabindex="0">
             <a href="/dashboard">
-                <i class="ion-ios-home ion-2x"></i>
+                <i class="ion-ios-home-outline ion-2x"></i>
                 Dashboard
             </a>
         </div>
 
         <div class="sidebar-item">
             <a href="/customer">
-                <i class="ion-android-people ion-2x"></i>
+                <i class="ion-ios-people-outline ion-2x"></i>
                 Customer
             </a>
         </div>
@@ -167,15 +167,22 @@
         </div>
 
         <div class="sidebar-item">
+            <a href="/category">
+                <i class="ion-ios-list-outline ion-2x"></i>
+                Kategori
+            </a>
+        </div>
+
+        <div class="sidebar-item">
             <a href="/store">
-                <i class="ion-android-cart ion-2x"></i>
+                <i class="ion-ios-cart-outline ion-2x"></i>
                 Toko
             </a>
         </div>
 
         <div class="sidebar-item">
             <a href="/report">
-                <i class="ion-stats-bars ion-2x"></i>
+                <i class="ion-ios-paper-outline ion-2x"></i>
                 Laporan
             </a>
         </div>
