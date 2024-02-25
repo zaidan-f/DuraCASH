@@ -156,3 +156,63 @@ function confirmDelete() {
     // For now, let's just close the pop-up
     closeDeleteModal();
 }
+
+// Function to open the payment confirmation modal
+function openPayModal() {
+    var modal = document.getElementById('payModal');
+    modal.style.display = 'block';
+    populatePaymentDetails(); // Call function to populate payment details
+}
+
+// Function to close the payment confirmation modal
+function cancelPayment() {
+    var modal = document.getElementById('payModal');
+    modal.style.display = 'none';
+}
+
+// Function to populate payment details in the table
+function populatePaymentDetails() {
+    var tableRows = document.querySelectorAll('.table tbody tr');
+    var tableBody = document.getElementById('paymentDetails');
+
+    // Clear existing rows
+    tableBody.innerHTML = '';
+
+    // Loop through the table rows
+    tableRows.forEach(function(row) {
+        var name = row.cells[0].textContent;
+        var qty = row.cells[1].textContent;
+        var sell = row.cells[2].textContent;
+        var total = row.cells[3].textContent;
+
+        var newRow = document.createElement('tr');
+
+        var nameCell = document.createElement('td');
+        nameCell.textContent = name;
+        newRow.appendChild(nameCell);
+
+        var qtyCell = document.createElement('td');
+        qtyCell.textContent = qty;
+        newRow.appendChild(qtyCell);
+
+        var sellCell = document.createElement('td');
+        sellCell.textContent = sell;
+        newRow.appendChild(sellCell);
+
+        var totalCell = document.createElement('td');
+        totalCell.textContent = total;
+        newRow.appendChild(totalCell);
+
+        tableBody.appendChild(newRow);
+    });
+}
+
+
+
+// Function to handle payment confirmation
+function confirmPayment() {
+    // Add your logic here to handle the payment confirmation
+    // For example, you can submit the payment data to a server
+    // and then close the modal once the payment is confirmed
+    // closePayModal();
+}

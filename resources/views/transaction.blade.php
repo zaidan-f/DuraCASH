@@ -93,6 +93,44 @@
         </div>
     </div>
 
+<!-- Modal for Payment -->
+<div id="payModal" class="modal">
+    <div class="modal-content2">
+        <h2>Payment Confirmation</h2>
+        <!-- Container for payment details -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Qty</th>
+                    <th>Harga Jual</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($itemData as $item)
+                <tr>
+                    <td>{{ $item['name'] }}</td>
+                    <td>{{ $item['qty'] }}</td>
+                    <td>{{ $item['sell'] }}</td>
+                    <td>{{ $item['total'] }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <!-- Display grand total -->
+        <div class="grand-total">
+            <strong>Grand Total:</strong> {{ array_sum(array_column($itemData, 'total')) }}
+        </div>
+        <!-- Buttons for payment confirmation -->
+        <div class="button-container">
+            <button onclick="confirmPayment()">Pay</button>
+            <button onclick="cancelPayment()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
     <div id="customerModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeCustModal()">&times;</span>
