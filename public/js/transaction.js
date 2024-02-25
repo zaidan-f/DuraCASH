@@ -34,7 +34,7 @@ window.onclick = function(event) {
     }
 }
 
-function yourActionFunction(name) {
+function InputCustomer(name) {
     // Assuming you have an input field with id "customer"
     document.getElementById('customer').value = name;
 
@@ -157,6 +157,15 @@ function confirmDelete() {
     closeDeleteModal();
 }
 
+function handlePayButtonClick() {
+    var customerName = document.getElementById('customer').value.trim();
+    if (customerName === '') {
+        alert('Tidak Ada Data Customer.');
+        return;
+    }
+    openPayModal();
+}
+
 // Function to open the payment confirmation modal
 function openPayModal() {
     var modal = document.getElementById('payModal');
@@ -209,10 +218,45 @@ function populatePaymentDetails() {
 
 
 
-// Function to handle payment confirmation
+// Function to confirm payment
 function confirmPayment() {
-    // Add your logic here to handle the payment confirmation
-    // For example, you can submit the payment data to a server
-    // and then close the modal once the payment is confirmed
-    // closePayModal();
+    // Add your logic here to confirm the payment
+    // For now, let's just close the payment modal and open the print modal
+    cancelPayment();
+    
+    // Get customer name, transaction date, and transaction number
+    var customerName = document.getElementById('customer').value;
+    var transactionDate = document.getElementById('transactionDate').value;
+    var transactionNumber = document.getElementById('transactionNumber').value;
+
+    // Update the PrintPayModal with customer name, transaction date, and transaction number
+    document.getElementById('customerNamePrint').textContent = 'Customer Name: ' + customerName;
+    document.getElementById('transactionDatePrint').textContent = 'Transaction Date: ' + transactionDate;
+    document.getElementById('transactionNumberPrint').textContent = 'Transaction Number: ' + transactionNumber;
+
+    // Open the print modal
+    openPrintModal();
+    printConfirmationModal();
 }
+
+
+// Function to open the print modal
+function openPrintModal() {
+    var modal = document.getElementById('PrintPayModal');
+    modal.style.display = 'block';
+}
+
+// Function to print the payment confirmation modal
+function printConfirmationModal() {
+    window.print();
+    closePrintModal();
+
+}
+
+// Function to close the PrintPayModal
+function closePrintModal() {
+    var modal = document.getElementById('PrintPayModal');
+    modal.style.display = 'none';
+}
+
+document.getElementById("dateNow").innerHTML = Date();

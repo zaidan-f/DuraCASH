@@ -396,3 +396,53 @@ input:read-only{
 #payModal .grand-total span {
     font-size: 18px;
 }
+
+/* Styles for the Payment Confirmation Modal */
+#PrintPayModal {
+    display: none;
+}
+
+#PrintPayModal .modal-content3 {
+    background-color: #fefefe;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: auto; /* Center the modal vertically and horizontally */
+}
+
+#PrintPayModal h1 {
+    background-color: transparent;
+    color: black;
+    border-radius: 5px 5px 0 0;
+    margin: auto;
+    text-align: center;
+}
+
+#PrintPayModal .close:hover,
+#PrintPayModal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#PrintPayModal .payment-details {
+    margin-top: 20px;
+}
+
+#PrintPayModal .payment-details p {
+    margin-bottom: 10px;
+}
+
+#PrintPayModal .grand-total-print {
+    font-size: 24px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+#PrintPayModal .grand-total-print strong {
+    font-weight: bold;
+}
+
+#PrintPayModal .grand-total-print span {
+    font-size: 18px;
+}

@@ -116,10 +116,12 @@
     </div>
 </div>
 
-@include('layout.footer')
+    @include('layout.footer')
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/cat.js"></script>
+    <script src="js/sidebar.js"></script>
+
 </body>
 
 </html>

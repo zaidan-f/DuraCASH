@@ -89,7 +89,7 @@
         </div>
 
         <div>
-            <button class="pay-btn" onclick="openPayModal()"><i class="ion-android-checkmark-circle ion-2x"></i>Bayar</button>
+            <button class="pay-btn" onclick="handlePayButtonClick()"><i class="ion-android-checkmark-circle ion-2x"></i>Bayar</button>
         </div>
     </div>
 
@@ -130,6 +130,44 @@
     </div>
 </div>
 
+<!-- Print Modal for Payment -->
+<div id="PrintPayModal" class="modal">
+    <div class="modal-content3">
+        <h1>DuraPos</h1>
+        <hr>
+        <h3 id="customerNamePrint"></h3>
+        <h3 id="transactionDatePrint"></h3>
+        <h3 id="transactionNumberPrint"></h3>
+        <h3 id="dateNow"></h3>
+        <hr>
+        <!-- Container for payment details -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Qty</th>
+                    <th>Harga Jual</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($itemData as $item)
+                <tr>
+                    <td>{{ $item['name'] }}</td>
+                    <td>{{ $item['qty'] }}</td>
+                    <td>{{ $item['sell'] }}</td>
+                    <td>{{ $item['total'] }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <!-- Display grand total -->
+        <div class="grand-total-print">
+            <strong>Grand Total:</strong> {{ array_sum(array_column($itemData, 'total')) }}
+        </div>
+    </div>
+</div>
+
 
     <div id="customerModal" class="modal">
         <div class="modal-content">
@@ -152,7 +190,7 @@
                                 <td>{{ $customer['email'] }}</td>
                                 <td>{{ $customer['phone'] }}</td>
                                 <td class="action-buttons">
-                                    <button class="add-btnCust" onclick="yourActionFunction('{{ $customer['namecust'] }}')">
+                                    <button class="add-btnCust" onclick="InputCustomer('{{ $customer['namecust'] }}')">
                                         <i class="ion-plus ion-2x"></i>
                                     </button>
                                 </td>
@@ -249,6 +287,8 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/transaction.js"></script>
+    <script src="js/sidebar.js"></script>
+    
 </body>
 
 </html>

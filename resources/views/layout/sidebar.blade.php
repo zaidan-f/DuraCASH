@@ -10,6 +10,7 @@
                 font-family: 'Poppins', sans-serif;
                 display: flex;
                 flex-direction: column;
+                height: 100%;
                 min-height: 100vh;
             }
 
@@ -127,6 +128,12 @@
                 color: #C42E1D;
                 background-color: #f1f1f1;
             }
+
+            .sidenav a.active {
+                color: #ffffff;
+                background-color: #C42E1D;
+            }
+
         </style>
     </head>
 
@@ -145,49 +152,49 @@
 
     <!-- Sidebar -->
     <div id="sidebar" class="sidenav">
-        <div class="sidebar-item" tabindex="0">
+        <div class="sidebar-item" tabindex="0" id="dashboard">
             <a href="/dashboard">
                 <i class="ion-ios-home-outline ion-2x"></i>
                 Dashboard
             </a>
         </div>
 
-        <div class="sidebar-item">
+        <div class="sidebar-item" id="customer">
             <a href="/customer">
                 <i class="ion-ios-people-outline ion-2x"></i>
                 Customer
             </a>
         </div>
 
-        <div class="sidebar-item">
+        <div class="sidebar-item" id="items">
             <a href="/items">
                 <i class="ion-bag ion-2x"></i>
                 Produk
             </a>
         </div>
 
-        <div class="sidebar-item">
+        <div class="sidebar-item" id="category">
             <a href="/category">
                 <i class="ion-ios-list-outline ion-2x"></i>
                 Kategori
             </a>
         </div>
 
-        <div class="sidebar-item">
+        <div class="sidebar-item" id="store">
             <a href="/store">
                 <i class="ion-ios-cart-outline ion-2x"></i>
                 Toko
             </a>
         </div>
 
-        <div class="sidebar-item">
+        <div class="sidebar-item" id="report">
             <a href="/report">
                 <i class="ion-ios-paper-outline ion-2x"></i>
                 Laporan
             </a>
         </div>
 
-        <div class="sidebar-item">
+        <div class="sidebar-item" id="transaction">
             <a href="/transaction">
                 <i class="ion-monitor ion-2x"></i>
                 Transaksi
@@ -204,7 +211,19 @@
     </div>
 
     <!-- Page Content -->
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+        $(document).ready(function(){
+        var url = window.location.href;
+        var activePage = url.substr(url.lastIndexOf('/') + 1);
+        $('.sidenav a').each(function(){
+            var linkPage = $(this).attr('href').substr($(this).attr('href').lastIndexOf('/') + 1);
+            if (linkPage === activePage) {
+                $(this).addClass('active');
+            }
+        });
+    });
+</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
