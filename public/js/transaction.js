@@ -26,21 +26,26 @@ function closeCustModal() {
     modal.style.display = 'none';
 }
 
-// Close the modal if the user clicks outside of it
+// Function to handle clicking outside of modals
 window.onclick = function(event) {
-    var modal = document.getElementById('customerModal');
-    if (event.target == modal) {
-        modal.style.display = 'none';
+    var customerModal = document.getElementById('customerModal');
+    var addItemsModal = document.getElementById('addItems');
+    if (event.target == customerModal) {
+        customerModal.style.display = 'none';
+    }
+    if (event.target == addItemsModal) {
+        addItemsModal.style.display = 'none';
     }
 }
 
 function InputCustomer(name) {
     // Assuming you have an input field with id "customer"
-    document.getElementById('customer').value = name;
+    document.getElementById('customer1').value = name;
 
     // Close the customer modal
     closeCustModal();
 }
+
 
 
 var selectedItems = [];
@@ -55,13 +60,6 @@ function closeAddModal() {
     modal.style.display = 'none';
 }
 
-// Close the modal if the user clicks outside of it
-window.onclick = function (event) {
-    var modal = document.getElementById('addItems');
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
-}
 
 function AddItemsAct(nameitem, stok, buy) {
     var newItem = { nameitem: nameitem, stok: stok, buy: buy };
@@ -158,7 +156,7 @@ function confirmDelete() {
 }
 
 function handlePayButtonClick() {
-    var customerName = document.getElementById('customer').value.trim();
+    var customerName = document.getElementById('customer1').value.trim();
     if (customerName === '') {
         alert('Tidak Ada Data Customer.');
         return;
@@ -225,7 +223,7 @@ function confirmPayment() {
     cancelPayment();
     
     // Get customer name, transaction date, and transaction number
-    var customerName = document.getElementById('customer').value;
+    var customerName = document.getElementById('customer1').value;
     var transactionDate = document.getElementById('transactionDate').value;
     var transactionNumber = document.getElementById('transactionNumber').value;
 

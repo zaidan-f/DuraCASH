@@ -44,7 +44,7 @@
             </div>
             <div class="col-2">
                 <div class="add-customer-input">
-                    <input type="text" id="customer" name="customer" required readonly>
+                    <input type="text" id="customer1" name="customer" required readonly>
                     <button class="add-btnCust" onclick="openCustModal()"><i class="ion-plus ion-2x"></i></button>
                 </div>
             </div>
@@ -133,7 +133,7 @@
 <!-- Print Modal for Payment -->
 <div id="PrintPayModal" class="modal">
     <div class="modal-content3">
-        <h1>DuraPos</h1>
+        <h1>DuraCASH</h1>
         <hr>
         <h3 id="customerNamePrint"></h3>
         <h3 id="transactionDatePrint"></h3>

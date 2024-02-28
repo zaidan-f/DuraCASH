@@ -20,7 +20,7 @@
 
 <body>
     <footer>
-        <p>&copy; {{ date('Y') }} DuraPOS. All rights reserved.</p>
+        <p>&copy; {{ date('Y') }} DuraCASH. All rights reserved.</p>
     </footer>
 </body>
 

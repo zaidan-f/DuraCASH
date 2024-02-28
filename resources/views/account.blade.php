@@ -12,14 +12,14 @@
     
     <div class="avatar">
         <!-- Replace the src attribute with the path to your avatar image -->
-        <img src="img\account.png" alt="Avatar" style="width: 100%; height:100%;">
+        <img src="img\account.jpg" alt="Avatar" style="width: 100%; height:100%;">
     </div>
 
     <div class="info-container">
         <button class="edit-acc" onclick="openEditPopup()">
             <i class="ion-edit"></i> Edit
         </button>
-        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Name:</strong> M. Qjyuxiehuano</p>
         <p><strong>Email:</strong> alamat@email.com</p>
         <p><strong>Address:</strong> Jl. Jalan Jalanan, Indonesia.</p>
         <p><strong>Telephone:</strong> 089643214765</p>

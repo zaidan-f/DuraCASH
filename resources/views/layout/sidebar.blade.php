@@ -16,7 +16,7 @@
 
             /* Navbar */
             .navbar {
-                background-color: #fff;
+                background-color: #C42E1D;
                 display: flex;
                 overflow: hidden;
                 border-bottom: solid 2px #C42E1D;
@@ -25,6 +25,8 @@
                 width: 100%;
                 z-index: 1;
                 max-height: 50px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+
             }
 
             .navbar a {
@@ -32,7 +34,7 @@
                 text-align: center;
                 padding: 8px 6px;
                 text-decoration: none;
-                color: #C42E1D;
+                color: #ffffff;
                 font-weight: 1000;
                 font-size: larger;
             }
@@ -66,6 +68,7 @@
                 height: auto;
                 border-radius: 50%;
                 margin: 10px 0px 0px 0px;
+                background-color:#fff;
             }
 
             .logout-button {
@@ -142,11 +145,11 @@
     <div class="navbar">
         <div class="logo">
             <img src="img\logo.png" alt="">
-            <a href="/dashboard">DuraPOS</a>
+            <a href="/dashboard">DuraCASH</a>
         </div>
 
         <div class="account-section">
-            <a href="/account"><img src="img\account.png" alt="Account Image"></a>
+            <a href="/account"><img src="img\account.jpg" alt="Account Image"></a>
         </div>
     </div>
 

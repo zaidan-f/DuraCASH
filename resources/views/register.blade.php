@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DuraPOS - Register</title>
+    <title>DuraCASH - Register</title>
     <!-- Web page CSS -->
     <link rel="stylesheet" href="css\register.css" >
     <!-- Font Awesome library -->

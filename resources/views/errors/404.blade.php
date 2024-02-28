@@ -30,7 +30,7 @@
         </svg>
              
             <h1>Page Not Found</h1>
-            <a href="/"><button class="glow-on-hover" type="button">Back to Home</button></a>
+            <a href="/dashboard"><button class="glow-on-hover" type="button">Back to Home</button></a>
     </div>
 
 </body>
