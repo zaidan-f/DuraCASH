@@ -41,18 +41,18 @@
                     <a href="/customer">Lihat Detail</a>
                 </div>
 
-                <div class="card">
+                {{-- <div class="card">
                     <h2>Toko</h2>
                     <h1>50</h1>
                     <a href="/store">Lihat Detail</a>
-                </div>
+                </div> --}}
             </div>
 <!-- Flexbox container for the charts -->
 <div class="charts-container">
     <!-- Chart for "Laporan Penjualan" -->
     <div class="chart">
         <h2>Laporan Penjualan</h2>
-        <canvas id="salesChart" width="80%" height="20%" 
+        <canvas id="salesChart" width="50%" height="20%" 
                 data-labels="{{ json_encode($chartData['labels']) }}"
                 data-data="{{ json_encode($chartData['data']) }}"></canvas>
     </div>
@@ -60,7 +60,7 @@
     <!-- Chart for "Laporan Laba Rugi" -->
     <div class="chart">
         <h2>Laporan Laba Rugi</h2>
-        <canvas id="profitLossChart" width="80%" height="20%" 
+        <canvas id="profitLossChart" width="50%" height="20%" 
                 data-labels="{{ json_encode($profitLossData['labels']) }}"
                 data-data="{{ json_encode($profitLossData['data']) }}"></canvas>
     </div>
