@@ -1,3 +1,4 @@
+<p align="center"><a href="" target="_blank"><img src="https://i.postimg.cc/bw6DPfD2/logo.png" width="400" alt="DuraCASH Logo"></a></p>
 
 
 ## About Laravel
