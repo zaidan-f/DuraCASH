@@ -47,14 +47,26 @@
                     <a href="/store">Lihat Detail</a>
                 </div>
             </div>
-
-            <!-- Chart Container -->
-            <div class="chart">
-                <h2>Laporan Penjualan</h2>
-                <canvas id="salesChart" width="80%" height="20%" 
+<!-- Flexbox container for the charts -->
+<div class="charts-container">
+    <!-- Chart for "Laporan Penjualan" -->
+    <div class="chart">
+        <h2>Laporan Penjualan</h2>
+        <canvas id="salesChart" width="80%" height="20%" 
                 data-labels="{{ json_encode($chartData['labels']) }}"
                 data-data="{{ json_encode($chartData['data']) }}"></canvas>
-            </div>
+    </div>
+
+    <!-- Chart for "Laporan Laba Rugi" -->
+    <div class="chart">
+        <h2>Laporan Laba Rugi</h2>
+        <canvas id="profitLossChart" width="80%" height="20%" 
+                data-labels="{{ json_encode($profitLossData['labels']) }}"
+                data-data="{{ json_encode($profitLossData['data']) }}"></canvas>
+    </div>
+</div>
+
+
         </div>
     </div>
 

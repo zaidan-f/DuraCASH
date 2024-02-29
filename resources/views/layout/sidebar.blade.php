@@ -79,7 +79,7 @@
                 background-color: #C42E1D;
                 text-align: center;
                 padding: 0px 0;
-                border-top: solid 2px #fff;
+                border-top: solid 2px #C42E1D;
                 color: #fff;
             }
 
@@ -133,8 +133,9 @@
             }
 
             .sidenav a.active {
-                color: #ffffff;
-                background-color: #C42E1D;
+                color: #000;
+                background-color: #e0e0e0;
+                border-bottom: 2px  solid #C42E1D;
             }
 
         </style>

@@ -27,11 +27,18 @@ class DashboardController extends Controller
             $labels[] = $label;
         }
 
+        // Generate sample data for both charts
         $chartData = [
             'labels' => $labels,
-            'data' => [],
+            'data' => [], // Populate this array with your sales data
         ];
 
-        return view('dashboard', compact('chartData'));
+        // Generate sample data for "Laporan Laba Rugi" chart
+        $profitLossData = [
+            'labels' => $labels,
+            'data' => [], // Populate this array with your profit/loss data
+        ];
+
+        return view('dashboard', compact('chartData', 'profitLossData'));
     }
 }

@@ -9,6 +9,43 @@
     <link rel="stylesheet" href="css/styleAll.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Modal Styles */
+.modal {
+    display: none; /* Hide the modal by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Center modal on screen */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adjust modal width as needed */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    </style>
 
 </head>
 
@@ -62,6 +99,16 @@
         </div>
 
     </div>
+
+        <!-- Modal -->
+        <div id="printModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Print Options</h2>
+                <button id="printTableBtn">Print by Table</button>
+                <button id="printChartBtn">Print by Chart Diagram</button>
+            </div>
+        </div>
 
     @include('layout.footer')
 

@@ -23,9 +23,6 @@ class TransactionController extends Controller
             ['namecust' => 'John Doe', 'email' => 'john@example.com', 'phone' => '0892635175262'],
             ['namecust' => 'Jane Smith', 'email' => 'jane@example.com', 'phone' => '0892635175262'],
             ['namecust' => 'Bob Johnson', 'email' => 'bob@example.com', 'phone' => '0892635175262'],
-            ['namecust' => 'John Doe', 'email' => 'john@example.com', 'phone' => '0892635175262'],
-            ['namecust' => 'Jane Smith', 'email' => 'jane@example.com', 'phone' => '0892635175262'],
-            ['namecust' => 'Bob Johnson', 'email' => 'bob@example.com', 'phone' => '0892635175262'],
         ];
 
         $addItems = [
